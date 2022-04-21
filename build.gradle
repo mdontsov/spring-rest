@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'demo.spring-rest'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-webmvc:5.3.19'
+    implementation 'org.springframework.security:spring-security-web:5.6.2'
+    implementation 'org.springframework.security:spring-security-config:5.6.2'
+    implementation 'org.springframework.security:spring-security-taglibs:5.6.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.2.2'
+    implementation 'org.jetbrains:annotations:23.0.0'
+    implementation 'javax.servlet:jstl:1.2'
+    implementation 'javax.annotation:javax.annotation-api:1.3.2'
+    compileOnly 'javax.servlet.jsp:jsp-api:2.2'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
